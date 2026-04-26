@@ -1,0 +1,88 @@
+{
+  "_meta": {
+    "description": "Ottawa municipal tax rates and budget service breakdown percentages.",
+    "instructions": "Update this file each year after Ottawa City Council adopts the final budget (typically December). Tax rates sourced from City of Ottawa / WOWA.ca. Service percentages sourced from the Ottawa Draft Budget Explorer at open.ottawa.ca. After updating, commit to GitHub — the receipt app fetches the latest version automatically.",
+    "sources": {
+      "tax_rates": "https://wowa.ca/taxes/ottawa-property-tax and https://ottawa.ca/en/city-hall/budget-finance-and-corporate-planning",
+      "budget_data": "https://open.ottawa.ca/pages/understanding-your-city-budget",
+      "open_data_portal": "https://open.ottawa.ca"
+    },
+    "last_updated": "2025-01-01",
+    "updated_by": "Manual update from Open Ottawa Draft Budget Explorer datasets"
+  },
+
+  "tax_rates": {
+    "_note": "Municipal portion only — excludes education tax (~0.153%). Source: WOWA / City of Ottawa.",
+    "2025": 0.005827,
+    "2024": 0.005763,
+    "2023": 0.005618,
+    "2022": 0.005455,
+    "2021": 0.005291,
+    "2020": 0.004731,
+    "2019": 0.005094,
+    "2018": 0.004970
+  },
+
+  "services": {
+    "_note": "Percentages represent each service's share of the municipal tax levy. Derived from Ottawa Operating Budget summaries at open.ottawa.ca. Update annually after budget adoption.",
+    "_how_to_update": "1. Go to https://open.ottawa.ca/pages/understanding-your-city-budget  2. Download the latest Operating Budget Summaries CSV.  3. Sum the net tax levy by service area.  4. Calculate each service as a % of total levy.  5. Update the pct fields below for the new year and bump last_updated in _meta.",
+    "2025": [
+      {
+        "icon": "🚌",
+        "nameEN": "OC Transpo / Transit",
+        "nameFR": "OC Transpo / Transport en commun",
+        "descEN": "Bus & LRT operations, zero-emission buses, O-Train Lines 2 & 4, fare programs & transit safety.",
+        "descFR": "Exploitation des bus et du TLR, autobus zéro émission, lignes O-Train 2 et 4, programmes tarifaires et sécurité.",
+        "pct": 17.8
+      },
+      {
+        "icon": "🛣️",
+        "nameEN": "Roads & Infrastructure",
+        "nameFR": "Routes et infrastructure",
+        "descEN": "$184.6M in road, water & sewer projects, resurfacing, bridges, sidewalks & cycling paths.",
+        "descFR": "184,6 M$ en projets routiers, d'eau et d'égouts, resurfaçage, ponts, trottoirs et pistes cyclables.",
+        "pct": 15.2
+      },
+      {
+        "icon": "👮",
+        "nameEN": "Ottawa Police Service",
+        "nameFR": "Service de police d'Ottawa",
+        "descEN": "Community policing, emergency response, crime prevention & 25 new officers hired in 2025.",
+        "descFR": "Police communautaire, intervention d'urgence, prévention du crime et 25 nouveaux agents en 2025.",
+        "pct": 8.9
+      },
+      {
+        "icon": "🤝",
+        "nameEN": "Community & Social Services",
+        "nameFR": "Services communautaires et sociaux",
+        "descEN": "Housing supports, shelters, child care, long-term care & homelessness prevention programs.",
+        "descFR": "Aide au logement, refuges, garde d'enfants, soins de longue durée et programmes de prévention de l'itinérance.",
+        "pct": 11.2
+      },
+      {
+        "icon": "🚑",
+        "nameEN": "Paramedics & Fire Services",
+        "nameFR": "Paramédics et services d'incendie",
+        "descEN": "23 new paramedics, 22 new firefighters, new vehicles & improved emergency technology.",
+        "descFR": "23 nouveaux paramédics, 22 nouveaux pompiers, nouveaux véhicules et technologie d'urgence améliorée.",
+        "pct": 7.1
+      },
+      {
+        "icon": "🌿",
+        "nameEN": "Parks, Recreation & Culture",
+        "nameFR": "Parcs, loisirs et culture",
+        "descEN": "Community centres, sports facilities, parks maintenance & Ottawa Public Library services.",
+        "descFR": "Centres communautaires, installations sportives, entretien des parcs et services de la Bibliothèque publique d'Ottawa.",
+        "pct": 6.8
+      },
+      {
+        "icon": "♻️",
+        "nameEN": "Environmental & Public Health",
+        "nameFR": "Environnement et santé publique",
+        "descEN": "Garbage & recycling, Ottawa Public Health, immunizations & clean water programs.",
+        "descFR": "Collecte des ordures et recyclage, Santé publique Ottawa, vaccinations et programmes d'eau potable.",
+        "pct": 5.3
+      }
+    ]
+  }
+}
